@@ -3,8 +3,8 @@ import { AddToCart } from '../components/add-to-cart';
 import type { ShopItem } from '../types';
 
 function formatCurrency(amount: number) {
-	return new Intl.NumberFormat('en-US', {
-		currency: 'usd',
+	return new Intl.NumberFormat('pl-PL', {
+		currency: 'pln',
 		style: 'currency',
 	}).format(amount);
 }
@@ -24,6 +24,11 @@ interface Props {
 	addToCart?: boolean;
 }
 
+/**
+ * Destructures the `count` and `addToCart` props from the `Astro.props` object.
+ * @param {number} count - The maximum number of items that can be added to the cart.
+ * @param {boolean} addToCart - Whether or not the "Add to Cart" button should be displayed.
+ */
 const { count = Infinity, addToCart = true } = Astro.props;
 ---
 
