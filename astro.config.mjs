@@ -6,11 +6,8 @@ import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-  site: '',
+  site: 'https://spiffy-mooncake-b3419b.netlify.app',
   output: 'hybrid',
-  experimental: {
-    hybridOutput: true
-  },
   integrations: [solidJs(), react()],
   adapter: netlify()
 });
