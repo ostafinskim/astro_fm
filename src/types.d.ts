@@ -1,4 +1,4 @@
-export type ShopItem = {
+type ShopItem = {
 	id: number;
 	title: string;
 	description: string;
@@ -9,7 +9,7 @@ export type ShopItem = {
 	price: number;
 };
 
-export type CartItem = {
+type CartStore = {
 	quantity: number;
 	item: ShopItem;
 };

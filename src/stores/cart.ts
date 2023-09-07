@@ -6,13 +6,12 @@
  */
 
 import { computed, map } from 'nanostores';
-import type { CartItem, ShopItem } from '../types';
 
 /**
  * A NanoStore object that stores the items added to the cart.
  * The keys of the object are the ids of the items, and the values are the CartItem objects.
  */
-export const $cart = map<Record<number, CartItem>>({});
+export const $cart = map<Record<number, CartStore>>({});
 
 /**
  * Adds an item to the cart.
